@@ -43,6 +43,7 @@ const ipcMain = electron.ipcMain
 const Immutable = require('immutable')
 const Menu = require('./browser/menu')
 const Updater = require('./updater')
+const Importer = require('./importer')
 const messages = require('../js/constants/messages')
 const appConfig = require('../js/constants/appConfig')
 const appActions = require('../js/actions/appActions')
@@ -409,6 +410,7 @@ app.on('ready', () => {
     TrackingProtection.init()
     AdBlock.init()
     AdInsertion.init()
+    Importer.init()
 
     if (!loadedPerWindowState || loadedPerWindowState.length === 0) {
       if (!CmdLine.newWindowURL) {
