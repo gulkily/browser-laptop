@@ -29,28 +29,28 @@
                  - (@navbarBraveButtonWidth + 2 * @navbarButtonSpacing);
 }
 
-// Window Header
-.window-header {
+// Window Caption Buttons
+.windowCaptionButtons {
   -webkit-user-select: none;
   -webkit-app-region: drag;
-  height: 18px;
-  padding: 3px 0;
-  margin: 0px;
-  display: flex;
-  line-height: 30px;
+  height: 100%;
 
   .hidden {
     display: none;
   }
 
-  .title-bar-btns {
+  .container {
     -webkit-app-region: no-drag;
   }
 
-  .win-7, .win-10 {
+  button.captionButton {
+    outline: none;
+  }
+
+  .win7 {
     margin: -13px 3px 0 0;
 
-    button.win-action-btn {
+    button.captionButton {
       outline: 0;
       cursor: pointer;
       width: 45px;
@@ -92,6 +92,64 @@
       }
 
       &.max-btn {
+        background: url('../img/window-actions/windows/10/max-btn.svg') no-repeat;
+        border-right: 0px;
+        &:hover {
+          background-color: #e5e5e5;
+        }
+        &:active {
+          background-color: #cacacb;
+        }
+        &.fullscreen {
+          background: url('../img/window-actions/windows/10/max-btn-fullscreen.svg') no-repeat;
+          &:hover {
+            background-color: #e5e5e5;
+          }
+          &:active {
+            background-color: #cacacb;
+          }
+        }
+      }
+    }
+  }
+
+  .win10 {
+    button.captionButton {
+      width: 45px;
+      height: 29px;
+      color: #b1acac;
+      background-size: 12px 12px!important;
+      background-position: center!important;
+      border: 0;
+      display: inline-block;
+
+      &.fullscreen {
+        height:21px;
+      }
+
+      &.close {
+        background: url('../img/window-actions/windows/10/close-btn.svg') no-repeat;
+        &:hover {
+          background: url('../img/window-actions/windows/10/close-btn-white.svg') no-repeat;
+          background-color: #e5182c;
+        }
+        &:active {
+          background: url('../img/window-actions/windows/10/close-btn-white.svg') no-repeat;
+          background-color: #ef717c;
+        }
+      }
+
+      &.minimize {
+        background: url('../img/window-actions/windows/10/min-btn.svg') no-repeat;
+        &:hover {
+          background-color: #e5e5e5;
+        }
+        &:active {
+          background-color: #cacacb;
+        }
+      }
+
+      &.maximize {
         background: url('../img/window-actions/windows/10/max-btn.svg') no-repeat;
         border-right: 0px;
         &:hover {

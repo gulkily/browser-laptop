@@ -38,7 +38,7 @@ const ContextMenu = require('./contextMenu')
 const PopupWindow = require('./popupWindow')
 const NoScriptInfo = require('./noScriptInfo')
 const LongPressButton = require('./longPressButton')
-const WindowActionBar = require('./windowActionBar')
+const WindowCaptionButtons = require('./windowCaptionButtons')
 
 // Constants
 const config = require('../constants/config')
@@ -864,8 +864,8 @@ class Main extends ImmutableComponent {
                 braveShieldsDown: !braverySettings.shieldsUp
               })}
               onClick={this.onBraveMenu} />
-              { isWindows ? <WindowActionBar windowMaximized={this.props.windowState.getIn(['ui', 'isMaximized'])} /> : null }
           </div>
+          { isWindows ? <WindowCaptionButtons windowMaximized={this.props.windowState.getIn(['ui', 'isMaximized'])} /> : null }
         </div>
         <UpdateBar updates={this.props.appState.get('updates')} />
         {
