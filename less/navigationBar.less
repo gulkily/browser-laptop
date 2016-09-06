@@ -150,51 +150,114 @@
           background-color: #cacacb;
         }
         &.fullscreen {
-          /* TODO FIX ME */
-          background: url('../img/window-actions/windows/10/max-btn-fullscreen.svg') no-repeat;
           &:hover {
             background-color: #e5e5e5;
           }
           &:active {
             background-color: #cacacb;
           }
+          .widget {
+            margin-top: 4px;
+
+            .widget2 { display: inline-block; }
+            .widget3 { display: inline-block; }
+            .widget4 { display: inline-block; }
+            .widget5 { display: inline-block; }
+          }
         }
         .widget {
-          width: 8px;
-          height: 8px;
-          border: 1px solid black;
-          background: none;
+          width: 12px;
+          height: 12px;
           display: inline-block;
           vertical-align: middle;
+
+          .widget1 {
+            width: 8px;
+            height: 8px;
+            border: 1px solid black;
+            background: none;
+            position: relative;
+          }
+          .widget2 {
+            display: none;
+            width: 1px;
+            height: 2px;
+            background: black;
+            position: relative;
+            top: -22px;
+            left: 2px;
+          }
+          .widget3 {
+            display: none;
+            width: 10px;
+            height: 1px;
+            background: black;
+            position: relative;
+            top: -23px;
+            left: 1px;
+          }
+          .widget4 {
+            display: none;
+            width: 1px;
+            height: 10px;
+            background: black;
+            position: relative;
+            top: -14px;
+            left: 0px;
+          }
+          .widget5 {
+            display: none;
+            width: 2px;
+            height: 1px;
+            background: black;
+            position: relative;
+            top: -29px;
+            left: 5px;
+          }
         }
       }
 
       &.close {
         &:hover {
           background-color: #e5182c;
-          .widget1{ background:white; }
-          .widget2{ background:white; }
+          .widget {
+            .widget1{ background:white; }
+            .widget2{ background:white; }
+          }
         }
         &:active {
           background-color: #ef717c;
-          .widget1{ background:white; }
-          .widget2{ background:white; }
+          .widget {
+            .widget1{ background:white; }
+            .widget2{ background:white; }
+          }
         }
-        .widget1 {
-          width: 10px;
-          height: 1px;
-          background: black;
+        .widget {
+          width: 11px;
+          height: 11px;
           display: inline-block;
-          transform: rotate(45deg);
-          position: absolute;
-        }
-        .widget2 {
-          width: 10px;
-          height: 1px;
-          background: black;
-          display: inline-block;
-          transform: rotate(315deg);
-          position: absolute;
+          vertical-align: middle;
+
+          .widget1 {
+            width: 14px;
+            height: 1px;
+            background: black;
+            display: inline-block;
+            transform: rotate(45deg);
+            position: relative;
+            top: -6px;
+            left: -2px;
+          }
+          .widget2 {
+            width: 14px;
+            height: 1px;
+            background: black;
+            display: inline-block;
+            transform: rotate(315deg);
+            position: relative;
+            top: -21px;
+            left: -2px;
+          }
         }
       }
     }

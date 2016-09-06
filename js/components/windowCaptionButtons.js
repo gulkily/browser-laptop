@@ -59,8 +59,8 @@ class WindowCaptionButtons extends ImmutableComponent {
     return <div className='windowCaptionButtons'>
       <div className={'container ' + this.osClass}>
         <button className={this.buttonClass + ' captionButton minimize'} onClick={this.onMinimizeClick}><div className="widget" /></button>
-        <button className={this.buttonClass + ' captionButton maximize'} onClick={this.onMaximizeClick}><div className="widget" /></button>
-        <button className={this.buttonClass + ' captionButton close'} onClick={this.onCloseClick}><div className="widget1" /><div className="widget2" /></button>
+        <button className={this.buttonClass + ' captionButton maximize'} onClick={this.onMaximizeClick}><div className="widget"><div className="widget1" /><div className="widget2" /><div className="widget3" /><div className="widget4" /><div className="widget5" /></div></button>
+        <button className={this.buttonClass + ' captionButton close'} onClick={this.onCloseClick}><div className="widget"><div className="widget1" /><div className="widget2" /></div></button>
       </div>
     </div>
   }
