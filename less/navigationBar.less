@@ -49,51 +49,34 @@
   }
 
   .win7 {
-    margin: -13px 3px 0 0;
-
     button.captionButton {
       outline: 0;
       cursor: pointer;
-      width: 45px;
-      height: 23px;
+      width: 27px;
+      height: 18px;
       color: #b1acac;
       background-size: 12px 12px!important;
       background-position: center!important;
-      border: 1px solid #e1e1e1;
+      border: 1px solid #838383;
       display: inline-block;
-      padding: 12px;
+      background-color: transparent;
 
       &.fullscreen {
-        height:21px;
-        padding:6px;
       }
 
-      &.close-btn {
-        background: url('../img/window-actions/windows/10/close-btn.svg') no-repeat;
-        &:hover {
-          background: url('../img/window-actions/windows/10/close-btn-white.svg') no-repeat;
-          background-color: #e5182c;
-        }
-        &:active {
-          background: url('../img/window-actions/windows/10/close-btn-white.svg') no-repeat;
-          background-color: #ef717c;
-        }
-      }
-
-      &.min-btn {
+      &.minimize {
+        width: 28px;
         border-right: 0px;
-        border-bottom-left-radius: 5px;
-        background: url('../img/window-actions/windows/10/min-btn.svg') no-repeat;
         &:hover {
           background-color: #e5e5e5;
         }
         &:active {
           background-color: #cacacb;
         }
+        border-radius: 0 0 0 4px;
       }
 
-      &.max-btn {
-        background: url('../img/window-actions/windows/10/max-btn.svg') no-repeat;
+      &.maximize {
         border-right: 0px;
         &:hover {
           background-color: #e5e5e5;
@@ -102,13 +85,23 @@
           background-color: #cacacb;
         }
         &.fullscreen {
-          background: url('../img/window-actions/windows/10/max-btn-fullscreen.svg') no-repeat;
           &:hover {
             background-color: #e5e5e5;
           }
           &:active {
             background-color: #cacacb;
           }
+        }
+      }
+
+      &.close {
+        width: 48px;
+        border-radius: 0 0 4px 0;
+        &:hover {
+          background-color: #e5182c;
+        }
+        &:active {
+          background-color: #ef717c;
         }
       }
     }
